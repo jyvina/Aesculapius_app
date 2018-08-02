@@ -1,0 +1,28 @@
+@import "bootstrap";
+@import "bootstrap-sprockets";
+/* universal */
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  padding-top: 60px;
+}
+
+
+/*header*/
+
+
+
+/*static_pages*/
+/*menu_bar*/
+  
+.menu_bar{
+  nav{
+  font-family: Impact,Charcoal;
+  border-bottom: 1px solid #004986;
+  padding-top: 10px;
+  padding-bottom: 0px;
+  }
+}
