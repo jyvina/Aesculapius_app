@@ -1,0 +1,28 @@
+<%= provide(:title,"Videos Caregory")%>
+
+<%= render "static_pages/menu_bar" %>
+<div class= "container">
+<ol class="breadcrumb">
+	<li><%= link_to "category", categories_path%></li>
+	
+</ol>
+</div>
+
+<div class="container">
+<div class="category">
+    <h2>Category</h2>
+    <div class= "jumbotron">
+     <ol class="list">
+        <% @category.each do |category| %>
+        <li>
+        <%= link_to category.title, category_path(category), class: "title"%>
+            <ul class="remarks">
+                <li><%= category.contents %></li>
+            </ul>
+        </li>
+        
+        <% end %>
+     </ol>
+    </div>
+</div>
+</div>

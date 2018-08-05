@@ -1,0 +1,7 @@
+<div class= "container">
+<ol class="breadcrumb">
+	<li><%= link_to "category", categories_path%></li>
+	<li><%= link_to "video", category_videos_path(@category) %></li>
+	<li class="active"><%= @video.title %></li>
+</ol>
+</div>

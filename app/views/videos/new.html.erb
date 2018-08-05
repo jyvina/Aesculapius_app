@@ -1,0 +1,21 @@
+<% provide(:title, "Videos new") %>
+
+<%= render "static_pages/menu_bar" %>
+<div class="container">
+    <h2>Videos </h2>
+    
+        <div class= "row">
+            <div class= "col-md-6 col-md-offset-3">
+                <%= form_for(@video,url:category_videos_path) do |f| %>
+                    <%= f.label :title %>
+                    <%= f.text_field :title %>
+    
+                    <%= f.label :contents %>
+                    <%= f.text_area :contents %>
+    
+                    <%= f.submit :"Create Video", class: "btn btn-primary" %>
+                <%end%>
+                
+            </div>
+        </div>
+</div>

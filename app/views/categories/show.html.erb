@@ -1,0 +1,30 @@
+<%= provide(:title,"Videos Caregory")%>
+
+<%= render "static_pages/menu_bar" %>
+<div class= "container">
+<ol class="breadcrumb">
+	<li><%= link_to "category", categories_path%></li>
+	<li><%= link_to "video", category_videos_path(@category) %></li>
+</ol>
+
+<div class="category">
+    <h2><%=@category.title %></h2>
+     <div class= "jumbotron">
+         <div class="item">Video teaching materials</div>
+        <ol class= "list">
+            <% @category.videos.each do |video| %>
+            <li>
+                <%= video.title %>
+                <%= link_to "Watch", video_path, class: "btn btn-primary btn-xs" %>
+                    <ul class="remarks">
+                        <li><%= video.contents %></li>
+                    </ul>
+            </li>
+            <% end %>
+        </ol>
+     </div>
+</div>
+<div clss = "btn">
+    <%= link_to "New Video Registration", new_category_video_path(@category), class: "btn btn-primary" %>
+</div>
+</div>
